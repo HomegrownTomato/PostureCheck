@@ -1,6 +1,4 @@
-const express = require("express");
 const axios = require("axios");
-const app = express();
 
 function sendMessage() {
   const date = new Date();
@@ -26,7 +24,3 @@ function sendMessage() {
 
 // Set the interval to every 3 hours
 setInterval(sendMessage, 3 * 60 * 60 * 1000);
-
-app.listen(3000, () => {
-  console.log("Server is running on port 3000");
-});
